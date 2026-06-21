@@ -1,1 +1,0 @@
-create_table_payments = "Zapytanie wpisz tutaj!"
