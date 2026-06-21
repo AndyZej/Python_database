@@ -1,0 +1,1 @@
+kcal = protein * 4 + carbohydrates * 4 + fats * 9.4
