@@ -1,0 +1,4 @@
+DELETE_BOOK_ID_5 = """
+DELETE FROM book
+WHERE id = 5;
+"""
