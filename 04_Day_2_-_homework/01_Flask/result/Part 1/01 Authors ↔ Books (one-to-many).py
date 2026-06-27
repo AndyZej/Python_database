@@ -1,0 +1,4 @@
+# SQL
+
+ALTER TABLE Books
+ADD COLUMN author_id INT REFERENCES Authors(id);

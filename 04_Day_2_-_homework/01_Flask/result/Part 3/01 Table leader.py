@@ -1,0 +1,5 @@
+# SQL
+
+SELECT name FROM Teams
+ORDER BY points DESC
+LIMIT 1;
