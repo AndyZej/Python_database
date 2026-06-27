@@ -1,0 +1,48 @@
+class Figure:
+    def __init__(self, color, x, y):
+        self.color = color
+        self.x = x
+        self.y = y
+
+    def move(self, x, y):
+        self.x = x
+        self.y = y
+
+    def _in_bounds(self, x, y):
+        return 0 <= x < 8 and 0 <= y < 8
+
+    def _get_horizontal_and_vertical_moves(self, chessboard):
+        moves = []
+        directions = [(1,0), (-1,0), (0,1), (0,-1)]
+
+        for dx, dy in directions:
+            x, y = self.x + dx, self.y + dy
+            while self._in_bounds(x, y):
+                piece = chessboard.board[x][y]
+                if piece is None:
+                    moves.append((x, y))
+                else:
+                    if piece.color != self.color:
+                        moves.append((x, y))  # capture
+                    break
+                x += dx
+                y += dy
+        return moves
+
+    def _get_diagonal_moves(self, chessboard):
+        moves = []
+        directions = [(1,1), (1,-1), (-1,1), (-1,-1)]
+
+        for dx, dy in directions:
+            x, y = self.x + dx, self.y + dy
+            while self._in_bounds(x, y):
+                piece = chessboard.board[x][y]
+                if piece is None:
+                    moves.append((x, y))
+                else:
+                    if piece.color != self.color:
+                        moves.append((x, y))  # capture
+                    break
+                x += dx
+                y += dy
+        return moves
