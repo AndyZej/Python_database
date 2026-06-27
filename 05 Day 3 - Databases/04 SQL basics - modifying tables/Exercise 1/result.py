@@ -1,0 +1,4 @@
+ADD_PRODUCT_RATING = """
+ALTER TABLE products
+ADD COLUMN rating DECIMAL(4,2);
+"""

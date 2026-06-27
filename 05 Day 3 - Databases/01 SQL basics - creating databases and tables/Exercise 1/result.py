@@ -1,0 +1,1 @@
+CREATE_DB = "CREATE DATABASE exercises_db;"
