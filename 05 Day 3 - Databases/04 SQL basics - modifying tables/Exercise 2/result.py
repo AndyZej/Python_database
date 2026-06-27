@@ -1,0 +1,4 @@
+ADD_CINEMA_SEATS = """
+ALTER TABLE cinemas
+ADD COLUMN seats INT;
+"""
